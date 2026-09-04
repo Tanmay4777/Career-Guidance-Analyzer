@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Career Guidance Assistant - Data Alcott Systems</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Chart.js for Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              900: '#4c1d95',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    
+    <!-- Top Nav Badges -->
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-brand-600 text-white font-bold flex items-center justify-center text-lg shadow-md shadow-brand-500/20">
+          AI
+        </div>
+        <div>
+          <div class="font-bold text-brand-700 text-base leading-tight">AI Career Guide</div>
+          <div class="text-[11px] text-slate-500 font-medium uppercase tracking-wider">Free Online AI & Data Science Internship · Career Guidance</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1">
+          <i data-lucide="compass" class="w-3.5 h-3.5"></i> Career Assistant
+        </span>
+        <span class="bg-brand-100 text-brand-800 text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span> Active
+        </span>
+      </div>
+    </div>
+
+    <!-- Main Title -->
+    <header class="mb-8">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">🧭</span>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">AI Career Guidance Assistant</h1>
+      </div>
+      <div class="h-1 w-14 bg-brand-600 rounded mt-2 mb-3"></div>
+      <p class="text-brand-600 font-semibold text-sm sm:text-base">
+        Free Online AI &amp; Data Science Internship Task · Student Support &amp; Career Planning
+      </p>
+    </header>
+
+    <!-- Task Information & Student Banner -->
+    <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm mb-8">
+      <div class="flex items-center gap-2 mb-5">
+        <div class="w-8 h-8 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600">
+          <i data-lucide="info" class="w-4 h-4"></i>
+        </div>
+        <h2 class="text-lg font-bold text-slate-900">Task Information</h2>
+      </div>
+
+      <div class="bg-brand-50/60 rounded-xl p-5 border border-brand-100/80 space-y-3.5 text-sm">
+        <div class="flex items-center">
+          <span class="w-40 text-slate-600 font-medium">Domain</span>
+          <span class="font-semibold text-slate-800">Student Support &amp; Career Planning</span>
+          <span class="text-xs bg-brand-100 text-brand-700 font-semibold px-2 py-0.5 rounded ml-2">NLP &amp; Conversational AI</span>
+        </div>
+        <div class="flex items-center">
+          <span class="w-40 text-slate-600 font-medium">Task Name</span>
+          <span class="font-semibold text-slate-800">Career Guidance Assistant</span>
+        </div>
+        <div class="flex items-center">
+          <span class="w-40 text-slate-600 font-medium">Technology Stack</span>
+          <span class="font-semibold text-slate-800">Python · NLTK / spaCy · Scikit-learn · Flask · Tailwind CSS</span>
+        </div>
+        <div class="flex items-center flex-wrap gap-2">
+          <span class="w-40 text-slate-600 font-medium">Internship Type</span>
+          <span class="font-semibold text-brand-700">Free Online AI &amp; Data Science Internship</span>
+          <span class="text-xs bg-slate-200 text-slate-700 font-semibold px-2 py-0.5 rounded">Online</span>
+        </div>
+        <div class="flex items-center">
+          <span class="w-40 text-slate-600 font-medium">Company</span>
+          <span class="font-semibold text-slate-800 mr-2">Data Alcott Systems</span>
+          <a href="https://www.dataalcott.com" target="_blank" class="text-xs text-brand-600 hover:underline font-medium">www.dataalcott.com</a>
+        </div>
+      </div>
+
+      <!-- Logged-in User Banner -->
+      <div class="mt-4 bg-brand-50 border border-brand-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center shadow-sm">
+            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5 font-semibold text-slate-900">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 fill-emerald-100"></i>
+              Logged in as <span class="text-slate-900 font-bold">Tanmay Sah</span>
+            </div>
+            <div class="text-xs text-brand-700 font-medium">Student Code: DAS008051</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1">
+            <i data-lucide="bot" class="w-3.5 h-3.5"></i> Mode: Conversational AI
+          </span>
+          <span class="bg-emerald-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1">
+            <i data-lucide="clock" class="w-3.5 h-3.5"></i> Status: Active
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Pipeline Checklist -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <!-- Core Features Card -->
+      <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-7 h-7 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600">
+            <i data-lucide="check-square" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base">Core Features (Completed)</h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-800">
+          <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100"><span class="text-emerald-500">✅</span> Greeting &amp; Introduction</div>
+          <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100"><span class="text-emerald-500">✅</span> Career Path Exploration</div>
+          <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100"><span class="text-emerald-500">✅</span> Skill Requirement Analysis</div>
+          <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100"><span class="text-emerald-500">✅</span> Industry Trends Insights</div>
+          <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100"><span class="text-emerald-500">✅</span> Profile-Based Suggestions</div>
+          <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100"><span class="text-emerald-500">✅</span> Career Path Guidance</div>
+        </div>
+      </div>
+
+      <!-- Bonus Features Card -->
+      <div class="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-base">Bonus Features (Implemented)</h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-slate-800">
+          <div class="flex items-center gap-2 bg-amber-50/40 p-2.5 rounded-xl border border-amber-100"><span class="text-amber-500">⭐</span> Salary Insights by Role</div>
+          <div class="flex items-center gap-2 bg-amber-50/40 p-2.5 rounded-xl border border-amber-100"><span class="text-amber-500">⭐</span> Job Market Growth Predictions</div>
+          <div class="flex items-center gap-2 bg-amber-50/40 p-2.5 rounded-xl border border-amber-100"><span class="text-amber-500">⭐</span> Top Hiring Companies Research</div>
+          <div class="flex items-center gap-2 bg-amber-50/40 p-2.5 rounded-xl border border-amber-100"><span class="text-amber-500">⭐</span> Interview Preparation Tips</div>
+          <div class="flex items-center gap-2 bg-amber-50/40 p-2.5 rounded-xl border border-amber-100"><span class="text-amber-500">⭐</span> Career Goal Setting Tracker</div>
+          <div class="flex items-center gap-2 bg-amber-50/40 p-2.5 rounded-xl border border-amber-100"><span class="text-amber-500">⭐</span> Interactive Visual Dashboard</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Workspace Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
+      
+      <!-- Left Panel: Chat Interface (7 Cols) -->
+      <div class="lg:col-span-7 bg-white border border-slate-200/80 rounded-2xl shadow-sm flex flex-col h-[650px] overflow-hidden">
+        
+        <!-- Chat Header -->
+        <div class="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-brand-600 text-white flex items-center justify-center shadow-sm">
+              <i data-lucide="bot" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-sm text-slate-900">CareerBot Assistant</h3>
+              <p class="text-[11px] text-emerald-600 font-semibold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Online &amp; Ready
+              </p>
+            </div>
+          </div>
+          <button onclick="resetChat()" class="text-xs text-slate-400 hover:text-slate-600 p-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 transition">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Chat Messages Body -->
+        <div id="chat-box" class="flex-1 p-4 overflow-y-auto space-y-4 text-xs">
+          <!-- Initial Assistant Message -->
+          <div class="flex gap-2.5 items-start">
+            <div class="w-7 h-7 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 font-bold text-xs">AI</div>
+            <div class="bg-slate-100 rounded-2xl rounded-tl-sm p-3.5 text-slate-800 leading-relaxed max-w-[85%] space-y-1.5 shadow-sm">
+              <p>Hello <strong>Tanmay</strong>! 👋 I am your <strong>AI Career Guidance Assistant</strong> at Data Alcott Systems.</p>
+              <p>I can help you explore modern tech careers, evaluate skill roadmaps, analyze industry compensation, and prepare for interviews. What would you like to explore today?</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Reply Action Chips -->
+        <div class="px-4 py-2 bg-slate-50 border-t border-slate-100 flex gap-2 overflow-x-auto text-[11px]">
+          <button onclick="sendQuickPrompt('AI & NLP Engineer')" class="px-3 py-1 bg-white border border-brand-200 text-brand-700 rounded-full font-medium hover:bg-brand-50 whitespace-nowrap shadow-2xs">🤖 AI &amp; NLP Engineer</button>
+          <button onclick="sendQuickPrompt('Data Scientist')" class="px-3 py-1 bg-white border border-brand-200 text-brand-700 rounded-full font-medium hover:bg-brand-50 whitespace-nowrap shadow-2xs">📊 Data Scientist</button>
+          <button onclick="sendQuickPrompt('Salary Insights')" class="px-3 py-1 bg-white border border-brand-200 text-brand-700 rounded-full font-medium hover:bg-brand-50 whitespace-nowrap shadow-2xs">💰 Salary Trends</button>
+          <button onclick="sendQuickPrompt('Interview Tips')" class="px-3 py-1 bg-white border border-brand-200 text-brand-700 rounded-full font-medium hover:bg-brand-50 whitespace-nowrap shadow-2xs">🎯 Interview Prep</button>
+        </div>
+
+        <!-- Input Bar -->
+        <div class="p-3 border-t border-slate-200 bg-white flex items-center gap-2">
+          <input type="text" id="user-input" onkeydown="handleEnter(event)" placeholder="Ask about roles, skills, roadmap, salary, or interview tips..." class="flex-1 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs outline-none focus:ring-1 focus:ring-brand-600 bg-slate-50/50" />
+          <button onclick="sendMessage()" class="bg-brand-600 hover:bg-brand-700 text-white p-2.5 rounded-xl transition shadow-sm">
+            <i data-lucide="send" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Right Panel: Visualizer & Career Insights (5 Cols) -->
+      <div class="lg:col-span-5 space-y-6">
+        
+        <!-- Salary Insights Chart (Bonus Feature) -->
+        <div class="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="font-bold text-xs text-slate-800 uppercase tracking-wider flex items-center gap-2">
+              <i data-lucide="bar-chart-3" class="w-4 h-4 text-brand-600"></i> Tech Compensation Benchmark (LPA)
+            </h4>
+            <span class="text-[10px] text-slate-500 font-semibold">Entry to Mid-Level</span>
+          </div>
+          <div class="h-44">
+            <canvas id="salaryChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Career Goal Setting Tracker (Bonus Feature) -->
+        <div class="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm space-y-3.5">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-xs text-slate-900 uppercase tracking-wider flex items-center gap-2">
+              <i data-lucide="target" class="w-4 h-4 text-brand-600"></i> Career Goal Setting Tracker
+            </h4>
+            <span class="text-[10px] bg-emerald-100 text-emerald-700 font-bold px-2 py-0.5 rounded">Target: 2026</span>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-slate-700">Target Role:</span>
+              <span class="font-bold text-brand-700" id="goal-role">AI / NLP Specialist</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-slate-700">Industry Readiness:</span>
+              <span class="font-bold text-emerald-600">88% (Proficient)</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-2">
+              <div class="bg-brand-600 h-2 rounded-full" style="width: 88%"></div>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-slate-100 text-[11px] text-slate-500 space-y-1">
+            <div>📌 <strong>Milestone 1:</strong> Complete NLP &amp; Recommender Systems (Done)</div>
+            <div>📌 <strong>Milestone 2:</strong> Master Transformer Fine-tuning &amp; RAG (In Progress)</div>
+          </div>
+        </div>
+
+        <!-- Job Market Growth & Hiring Companies -->
+        <div class="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm space-y-3">
+          <h4 class="font-bold text-xs text-slate-900 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="building-2" class="w-4 h-4 text-brand-600"></i> Top Hiring Companies &amp; Growth
+          </h4>
+          
+          <div class="space-y-2 text-xs">
+            <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="font-bold text-slate-800 block">AI &amp; NLP Engineering</span>
+                <span class="text-[10px] text-slate-500">Google, Microsoft, Data Alcott, NVIDIA</span>
+              </div>
+              <span class="text-xs font-extrabold text-emerald-600">+36% YoY</span>
+            </div>
+
+            <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="font-bold text-slate-800 block">Data Science &amp; MLOps</span>
+                <span class="text-[10px] text-slate-500">Amazon, Meta, Fractal, Adobe</span>
+              </div>
+              <span class="text-xs font-extrabold text-emerald-600">+28% YoY</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // Career Knowledge Base
+    const careerKB = {
+      "nlp": {
+        role: "AI & NLP Engineer",
+        description: "Specializes in training conversational agents, LLMs, sentiment classifiers, and vector search systems.",
+        skills: ["Python", "PyTorch", "Transformers (BERT/GPT)", "Hugging Face", "FastAPI", "Vector DBs"],
+        companies: ["Google", "Microsoft", "Data Alcott Systems", "OpenAI", "NVIDIA"],
+        salary: "₹12 - 28 LPA",
+        roadmap: "1. Python & Core NLP (Tokenization, Regex) -> 2. Embeddings & Scikit-learn -> 3. PyTorch Deep Learning -> 4. Transformers & LLMs (RAG) -> 5. API Deployment.",
+        interview: "Focus on Transformer self-attention mechanisms, cross-entropy loss, tokenization quirks, and RAG vector retrieval latency."
+      },
+      "data science": {
+        role: "Data Scientist & ML Specialist",
+        description: "Translates complex datasets into predictive machine learning models and actionable business decisions.",
+        skills: ["Python", "Pandas", "Scikit-learn", "SQL", "Feature Engineering", "Tableau", "Statistics"],
+        companies: ["Amazon", "Fractal", "Deloitte", "American Express", "Flipkart"],
+        salary: "₹10 - 24 LPA",
+        roadmap: "1. Advanced Statistics & SQL -> 2. Exploratory Data Analysis with Pandas -> 3. Supervised & Unsupervised ML -> 4. Feature Selection -> 5. MLOps Lifecycle.",
+        interview: "Be prepared for bias-variance tradeoff discussions, precision-recall curve interpretation, and live SQL querying."
+      },
+      "computer vision": {
+        role: "Computer Vision Specialist",
+        description: "Designs deep neural architectures for real-time video analytics, object detection, and visual segmentation.",
+        skills: ["Python", "OpenCV", "PyTorch", "YOLOv8", "CNNs", "TorchVision"],
+        companies: ["Tesla", "Qualcomm", "Intel", "Samsung R&D"],
+        salary: "₹11 - 26 LPA",
+        roadmap: "1. Image Processing with OpenCV -> 2. Convolutional Neural Networks (CNNs) -> 3. Object Detection (YOLO) -> 4. Edge Deployment (TensorRT).",
+        interview: "Expect questions on convolution kernels, vanishing gradients in deep nets, and mAP calculation across bounding boxes."
+      }
+    };
+
+    function appendMessage(sender, htmlText) {
+      const chatBox = document.getElementById('chat-box');
+      const isAI = sender === 'ai';
+      
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `flex gap-2.5 items-start ${isAI ? '' : 'flex-row-reverse'}`;
+
+      msgDiv.innerHTML = `
+        <div class="w-7 h-7 rounded-lg ${isAI ? 'bg-brand-100 text-brand-700' : 'bg-brand-600 text-white'} flex items-center justify-center shrink-0 font-bold text-xs">
+          ${isAI ? 'AI' : 'You'}
+        </div>
+        <div class="${isAI ? 'bg-slate-100 text-slate-800' : 'bg-brand-600 text-white'} rounded-2xl ${isAI ? 'rounded-tl-sm' : 'rounded-tr-sm'} p-3.5 leading-relaxed max-w-[85%] space-y-1.5 shadow-sm text-xs">
+          ${htmlText}
+        </div>
+      `;
+
+      chatBox.appendChild(msgDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function generateResponse(query) {
+      const q = query.toLowerCase();
+
+      // Salary Check
+      if (q.includes('salary') || q.includes('package') || q.includes('ctc') || q.includes('compensation')) {
+        return `
+          <p><strong>💼 Industry Compensation Insights (India Benchmark):</strong></p>
+          <ul class="list-disc ml-4 space-y-1">
+            <li><strong>AI / NLP Engineer:</strong> ₹12 - 28 LPA (Top tier: 35+ LPA)</li>
+            <li><strong>Data Scientist:</strong> ₹10 - 24 LPA</li>
+            <li><strong>Computer Vision Engineer:</strong> ₹11 - 26 LPA</li>
+            <li><strong>Software Engineer (ML):</strong> ₹9 - 22 LPA</li>
+          </ul>
+          <p class="text-[11px] text-slate-500 pt-1">Salaries scale higher with practical deployment experience in PyTorch, Transformers, and scalable cloud APIs.</p>
+        `;
+      }
+
+      // Interview Tips Check
+      if (q.includes('interview') || q.includes('prep') || q.includes('question')) {
+        return `
+          <p><strong>🎯 AI &amp; Data Science Interview Preparation Tips:</strong></p>
+          <ul class="list-disc ml-4 space-y-1">
+            <li><strong>Algorithms:</strong> Master Cosine Similarity, TF-IDF, Logistic Regression, and Transformer Attention.</li>
+            <li><strong>Projects:</strong> Be ready to explain your end-to-end architecture (e.g., your Data Alcott internship tasks).</li>
+            <li><strong>Coding:</strong> Practice live array manipulation in NumPy and SQL window functions.</li>
+            <li><strong>Behavioral:</strong> Explain how you overcame overfitting and managed model inference latency.</li>
+          </ul>
+        `;
+      }
+
+      // Role Detection
+      for (const [key, data] of Object.entries(careerKB)) {
+        if (q.includes(key) || (key === 'nlp' && q.includes('ai')) || (key === 'nlp' && q.includes('chatbot'))) {
+          document.getElementById('goal-role').innerText = data.role;
+          return `
+            <p><strong>🌟 Career Path: ${data.role}</strong></p>
+            <p>${data.description}</p>
+            <p><strong>🛠️ Essential Skills:</strong> ${data.skills.join(', ')}</p>
+            <p><strong>📍 Recommended Roadmap:</strong><br>${data.roadmap}</p>
+            <p><strong>🏢 Hiring Companies:</strong> ${data.companies.join(', ')}</p>
+            <p><strong>💰 Average Compensation:</strong> ${data.salary}</p>
+          `;
+        }
+      }
+
+      // Fallback response
+      return `
+        <p>I can help you deep-dive into the following areas:</p>
+        <ul class="list-disc ml-4 space-y-1">
+          <li><strong>Career Tracks:</strong> AI &amp; NLP Engineering, Data Science, Computer Vision.</li>
+          <li><strong>Salary Benchmarks:</strong> Ask for "Salary Insights".</li>
+          <li><strong>Interview Prep:</strong> Ask for "Interview Preparation Tips".</li>
+          <li><strong>Skill Roadmap:</strong> Ask for "How to become an AI Engineer".</li>
+        </ul>
+      `;
+    }
+
+    function sendMessage() {
+      const input = document.getElementById('user-input');
+      const val = input.value.trim();
+      if (!val) return;
+
+      appendMessage('user', val);
+      input.value = '';
+
+      setTimeout(() => {
+        const reply = generateResponse(val);
+        appendMessage('ai', reply);
+      }, 400);
+    }
+
+    function sendQuickPrompt(text) {
+      document.getElementById('user-input').value = text;
+      sendMessage();
+    }
+
+    function handleEnter(e) {
+      if (e.key === 'Enter') sendMessage();
+    }
+
+    function resetChat() {
+      const chatBox = document.getElementById('chat-box');
+      chatBox.innerHTML = '';
+      appendMessage('ai', 'Chat reset. Hello Tanmay! How can I assist your career roadmap today?');
+    }
+
+    // Chart.js Salary Visualizer
+    const ctx = document.getElementById('salaryChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Data Scientist', 'CV Specialist', 'NLP Engineer', 'GenAI Specialist'],
+        datasets: [{
+          label: 'Average LPA (₹ Lakhs)',
+          data: [14, 16, 18, 22],
+          backgroundColor: '#7c3aed',
+          borderRadius: 8,
+          barThickness: 24
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, max: 30, ticks: { font: { size: 10 } } },
+          x: { ticks: { font: { size: 10 } } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
